@@ -1,15 +1,35 @@
-<div class="container" style="padding: 70px;">
-    <h2 style="text-align: center;">Login</h2>
-    <form action="/action_page.php">
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Coloque seu email" name="email">
+<main class="py-5"> 
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+              <h2 class="title" style="text-align: center; padding: 20px;">Login</h2>
+          </div>
+          <div class="col-md-4"></div>
       </div>
-      <div class="form-group">
-        <label for="senha">Senha:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Digite sua senha" name="senha_login">
-      </div>
-      
-      <button type="submit" class="btn btn-primary" class="btn btn-light" style="background-color: #f9af26; border-color: #f9af26; font-size: medium;">Acessar</button>
-    </form>
-  </div>
+      <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4" id="divEstilizada">
+              <div class="form-group">
+                  <input class="form-control" type="email" id="Email" placeholder="Digite seu E-mail">
+              </div>
+              <div class="form-group">
+                  <input class="form-control" type="password" id="Senha" placeholder="Digite sua Senha">
+              </div>
+              <div class="row mt-4" id="areaButton">
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary" class="btn btn-light" style="background-color: #f9af26; border-color: #f9af26; font-size: medium; margin-right: 5px;">Acessar</button>
+                    <a routerLink="./../cadastrar" class="btn btn-light" style="background-color: #f9af26; border-color: #f9af26; font-size: medium; margin-right: 5px;"
+                     >Cadastrar</a>
+                     <a routerLink="./../home" class="btn btn-light" style="background-color: #f9af26; border-color: #f9af26; font-size: medium;"
+                     >Voltar</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+    </div>
+</main>
+
+  
+  

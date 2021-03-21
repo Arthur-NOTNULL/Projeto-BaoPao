@@ -1,0 +1,35 @@
+<main class="py-5"> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h2 class="title" style="text-align: center; padding: 20px;">Cadastro</h2>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" id="divEstilizada">
+                
+                <div class="form-group">
+                    <input class="form-control" type="text" [(ngModel)]="usuario.nome" name="nome" placeholder="Nome" >
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="email" [(ngModel)]="usuario.email" name="email" placeholder="E-mail" >
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" [(ngModel)]="usuario.senha" name="senha" placeholder="Senha" >
+                </div>
+                <div class="row mt-4" id="areaButton">
+                    <div class="col-12">
+                        <button (click)="saveUsuario()" class="btn btn-primary" class="btn btn-light" style="background-color: #f9af26; border-color: #f9af26; font-size: medium; margin-right: 5px;">Cadastrar</button>
+                         <a routerLink="./../contato" class="btn btn-light" style="background-color: #f9af26; border-color: #f9af26; font-size: medium;"
+                        >Voltar</a>
+                    </div>
+                </div>
+            
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+      </div>
+</main>
