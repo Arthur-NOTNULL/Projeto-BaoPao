@@ -10,7 +10,7 @@ import Usuario from '../Modulo/usuario';
 export class ContatoService {
   
 
-  private dbPath = '/Usuario';
+  private dbPath = '/Usuarios';
     
   
   usuarioRef: AngularFireList<Usuario> 
@@ -21,9 +21,13 @@ export class ContatoService {
 
   getAll(): AngularFireList<Usuario> {
     return this.usuarioRef;
+    
   }
 
   create(usuario: Usuario): any {
     return this.usuarioRef.push(usuario);
   }
+  
+
+ 
 }

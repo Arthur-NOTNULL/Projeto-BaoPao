@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import {ContatoService} from '../../shared/contato.service';
 import Usuario from 'src/app/Modulo/usuario';
 
+
+
+
 @Component({
   selector: 'app-cadastrar',
   templateUrl: './cadastrar.component.html',
@@ -14,21 +17,23 @@ export class CadastrarComponent implements OnInit {
 
   constructor(private contatoService: ContatoService) { }
 
-  ngOnInit(): void {
+  ngOnInit() { 
   }
 
   saveUsuario(): void {
     
-    this.contatoService.create(this.usuario).then(() => {
-      console.log('Created new item successfully!');
-      this.submitted = true;
-      this.usuario.nome = "";
-      this.usuario.email = "";
-      this.usuario.senha = "";
+    if(this.usuario.email == "" || this.usuario.senha == ""){alert("Digite todas as informações nescessarias")
+  }else{this.contatoService.create(this.usuario).then(() => {
+      console.log('Usuario Criado com sucesso!');
+      this.submitted = true;  
       //ir para pagina login cliente
+      window.location.href = ('home_cliente')
+      
+      
     });
+    }
   }
-
+  
   // newTutorial(): void {
     //this.submitted = false;
     //this.usuario = new Usuario();
