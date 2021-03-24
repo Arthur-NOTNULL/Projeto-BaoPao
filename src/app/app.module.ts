@@ -30,7 +30,7 @@ import { HomeClienteComponent } from './Pagina/Cliente/home-cliente/home-cliente
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebases),
     AngularFireDatabaseModule,
     
   ],

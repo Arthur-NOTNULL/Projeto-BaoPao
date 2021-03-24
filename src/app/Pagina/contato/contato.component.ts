@@ -39,11 +39,11 @@ export class ContatoComponent implements OnInit {
   
   Acessar()
   {
-    var emails = this.usuarios.valueOf(this.usuarios.email);
-     emails[0] = this.usuarios.email;
+    //var emails = this.usuarios.valueOf(this.usuarios.email);
+    
      
   
-    alert(emails);
+    //alert(emails);
   }
   
 }

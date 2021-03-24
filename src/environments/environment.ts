@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-    firebase : {
+    firebases : {
     apiKey: "AIzaSyB5BBLHVgkTUHqXtZL4CBz2GVuT4XUbJZU",
     authDomain: "padaria-baopao-f4a60.firebaseapp.com",
     databaseURL: "https://padaria-baopao-f4a60-default-rtdb.firebaseio.com",
