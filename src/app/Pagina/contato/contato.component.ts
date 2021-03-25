@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import {ContatoService} from '../../shared/contato.service';
 import { map } from 'rxjs/operators';
-import { stringify } from '@angular/compiler/src/util';
-import { AngularFireList } from '@angular/fire/database';
-import Usuario from 'src/app/Modulo/usuario';
 
 @Component({
   selector: 'app-contato',
@@ -14,6 +10,8 @@ import Usuario from 'src/app/Modulo/usuario';
 export class ContatoComponent implements OnInit {
  
   usuarios: any;
+  email:any;
+  senha:any;
   currentTutorial = null;
   currentIndex = -1;
   title = '';
@@ -39,11 +37,33 @@ export class ContatoComponent implements OnInit {
   
   Acessar()
   {
-    //var emails = this.usuarios.valueOf(this.usuarios.email);
+    var email_db = this.usuarios.valueOf(this.usuarios.email);
+    var senha_db = this.usuarios.valueOf(this.usuarios.senha);
+    var tipo_db = this.usuarios.valueOf(this.usuarios.tipo);
+    console.log(tipo_db)
     
-     
-  
-    //alert(emails);
+    var email_login = this.email;
+    var senha_login = this.senha;
+    var tipog = 'gerente'
+
+    if(!email_login || !senha_login){
+      alert('Preencha todos os dados')   
+    }else{
+      for (let i in email_db){
+      if (email_db[i]["email"] === email_login && senha_db[i]["senha"] === senha_login){
+          if(tipo_db[i]["tipo"] === tipog){
+             
+            window.location.href = ('home-gerente')
+          }
+           else{
+
+            window.location.href = ('home_cliente')
+            
+           }
+           
+
+    }}}
+    
+
   }
-  
 }

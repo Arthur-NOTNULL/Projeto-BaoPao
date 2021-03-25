@@ -1,0 +1,41 @@
+<div class="container-md">
+    <div class="row">
+        
+        <div class="col-md-6" style="width: 80px;">
+            <h2 style="text-align: center; padding: 30px;">Cadastrar Produtos</h2><br>
+            <div class="col-md-12" id="divEstilizada">
+                    
+                <div class="form-group">
+                    <input class="form-control" type="text" [(ngModel)]="produtos.titulo"  name="nome" placeholder="Titulo" >
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" [(ngModel)]="produtos.codigo" name="codigo" placeholder="Codigo de barra" >
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" [(ngModel)]="produtos.descricao"  name="descrição" placeholder="Descrição" >
+                </div>
+                
+                <div class="form-group">
+                    <input class="form-control" type="text" [(ngModel)]="produtos.padaria" name="padaria" placeholder="Qual padaria Pertence (Nome da Padaria)" >
+                </div>
+                <div class="row mt-4" id="areaButton">
+                    <div class="col-12">
+                        <button (click)="saveProduto()" class="btn btn-primary" class="btn btn-light" style="background-color: #f9af26; border-color: #f9af26; font-size: medium; margin-right: 5px;">Cadastrar</button>
+                         
+                    </div>
+                </div>
+            
+            </div>
+        </div>   
+                
+                
+                          
+            
+        <div class="col-md-6">
+            <h2 style="text-align: center; padding: 30px;">Lista de Produtos</h2>
+        </div>
+    
+    </div>
+</div>
+
+  

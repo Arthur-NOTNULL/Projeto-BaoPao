@@ -14,6 +14,8 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { HomeClienteComponent } from './Pagina/Cliente/home-cliente/home-cliente.component';
+import { GerenteComponent } from './Pagina/gerente/gerente.component';
+import { CadProdutoComponent } from './Pagina/gerente/cad-produto/cad-produto.component';
 
 
 
@@ -24,7 +26,9 @@ import { HomeClienteComponent } from './Pagina/Cliente/home-cliente/home-cliente
     ContatoComponent,
     HomeComponent,
     CadastrarComponent,
-    HomeClienteComponent
+    HomeClienteComponent,
+    GerenteComponent,
+    CadProdutoComponent
   ],
   imports: [
     BrowserModule,
